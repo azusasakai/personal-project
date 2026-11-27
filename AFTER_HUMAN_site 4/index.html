@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a09">
+  <meta name="description" content="人類の記録と生活文化をもとに商品を開発する、AFTER HUMAN百貨店です。">
+  <title>AFTER HUMAN. — Interspecies Department Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="opening" class="opening" aria-live="polite">
+    <button class="skip-button" id="skipOpening" type="button">SKIP INTRO <span aria-hidden="true">↗</span></button>
+    <div class="intro-stage" id="introStage">
+      <p class="eyebrow intro-index">A NOTE BEFORE ENTRY <span>·</span> 2478</p>
+      <div class="intro-copy" id="introCopy" aria-label="はじめまして。当サイトへアクセスいただき、ありがとうございます。当サイトは、『人間』を超えた知的生命体が営業する百貨店をイメージした、架空のショッピングサイトです。人間が残した記録を独自の視点から分析し、そこから着想を得た商品を企画・販売しています。私たちにとっては何気ない日常も、彼らにとっては未知の発見かもしれません。"></div>
+      <div class="intro-progress" aria-hidden="true"><span id="progressLine"></span></div>
+      <button class="intro-continue" id="continueIntro" type="button" hidden>CLICK / TAP TO CONTINUE <span aria-hidden="true">↗</span></button>
+    </div>
+    <section class="entry-stage" id="entryStage" aria-labelledby="entryTitle" hidden>
+      <p class="eyebrow">BEFORE YOU ENTER <span>·</span> CUSTOMER STUDY 01</p>
+      <h1 id="entryTitle">ご入店されますか？</h1>
+      <p class="entry-lead">人類についての理解度を、お聞かせください。</p>
+      <div class="choice-list">
+        <button class="choice" data-answer="curious" type="button"><span class="choice-letter">A</span><span class="choice-text"><strong>はい、知りたい</strong><small>人間について、さらに理解を深めたい。</small></span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+        <button class="choice" data-answer="understood" type="button"><span class="choice-letter">B</span><span class="choice-text"><strong>はい、十分理解している</strong><small>人間については、すでに理解している。</small></span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <p class="entry-note">※いずれの回答も、ご入店いただけます。</p>
+    </section>
+    <section class="transition-stage" id="transitionStage" aria-live="assertive" hidden>
+      <p class="eyebrow">CUSTOMER RECORD <span>·</span> UPDATED</p>
+      <div class="transition-messages"><p>ご回答ありがとうございます。</p><p>お客様の理解度を記録しました。</p><p id="answerMessage"></p></div>
+      <div class="store-portal" aria-hidden="true"><div class="portal-light"></div><span>AFTER<br>HUMAN.</span></div>
+    </section>
+  </main>
+
+  <div id="floorTransit" class="floor-transit" aria-live="polite" hidden>
+    <img id="transitImage" src="" alt="">
+    <div class="transit-caption"><span id="transitNumber"></span><span id="transitName"></span><small>DEPARTMENT ACCESS</small></div>
+  </div>
+
+  <div id="store" class="store" aria-hidden="true" inert>
+    <header class="site-header">
+      <button class="wordmark" type="button" data-route="floors" aria-label="AFTER HUMAN フロア案内へ">AFTER HUMAN<span>.</span><small>INTERSPECIES DEPARTMENT STORE / 2478</small></button>
+      <nav class="main-nav" aria-label="メインナビゲーション"><button type="button" data-route="floors">フロア案内</button><button type="button" data-record-open>顧客記録</button><button type="button" id="replayIntro" class="replay-link">INTRODUCTION ↗</button></nav>
+      <div class="header-meta"><span class="open-status"><i></i>ALL FLOORS OPEN</span><span>EST. 2478</span></div>
+    </header>
+    <main id="top">
+      <section class="hero" id="hero" aria-label="A NEW WAY TO UNDERSTAND LIFE.">
+        <div class="hero-stage">
+          <h1 class="hero-type">
+            <span class="ht ht1">A NEW</span>
+            <span class="ht ht2">WAY TO</span>
+            <span class="ht ht3">UNDER<b>–</b></span>
+            <span class="ht ht4">STAND</span>
+            <span class="ht ht5">LIFE.</span>
+          </h1>
+          <figure class="hero-specimen"><img src="assets/hero/after-human-hero.png" alt="古典的な人間の彫刻と、周囲を回る透明な軌道輪です。未来の生命体が再構築した、人類の標本です。"></figure>
+
+          <svg class="hero-measure" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M40 862H700M40 854v16M700 854v16M370 856v12"/>
+              <path d="M1390 120V640M1382 120h16M1382 640h16M1386 380h8"/>
+              <path d="M1010 40V16M1010 40h-18M1010 40h18" stroke-dasharray="2 3"/>
+            </g>
+          </svg>
+
+          <div class="note n-top"><span>FIG. 001</span> 観察対象<br>HOMO SAPIENS / 彫刻化<br>再構築個体 <i class="redact">████████</i></div>
+          <div class="note n-left">
+            <dl><dt>SPECIMEN No.</dt><dd>0001-<i class="redact">████</i></dd>
+            <dt>分類</dt><dd>ヒト科 / 第 6 次再現</dd>
+            <dt>推定存在時期</dt><dd>約 100,000 年前 — <i class="redact">██████</i></dd>
+            <dt>表情の解釈</dt><dd>＜思案＞ または ＜退屈＞<br><small>※判定は保留しています。</small></dd></dl>
+          </div>
+          <div class="note n-right">
+            <p class="n-title">この個体は、<br>石でできています。</p>
+            <p class="n-body">体温・発話・生殖の機能は確認されていません。<br>それでも人類は、これを「美」と呼びました。</p>
+            <p class="n-coord">N 35°41′ E 139°46′ <span>/</span> 2478.11.26</p>
+          </div>
+          
+          <div class="note n-meas">▲ この線の長さに意味はありません。</div>
+          <div class="note n-vert" aria-hidden="true">人類の理解度 — <i class="redact">███</i> %</div>
+        </div>
+        <div class="hero-foot"><span class="mono">01 <b>/</b> OBJECT OF STUDY</span><p>人類が残した記録と生活文化をもとに、私たちは新しい商品を開発しました。</p><button type="button" class="enter-link" data-route-scroll="floorHub">7つのフロアを観察する ↓</button></div>
+      </section>
+
+      <div class="ticker" aria-hidden="true"><span>人間は 一日に 平均 三度 「大丈夫」 と言い、そのうち 二度は 大丈夫ではありません。</span><span>— 観察記録 No. 4471 / 解釈：不明 —</span><span>人間は 挨拶のために 天候について 話します。</span></div>
+
+      <section id="floorHub" class="screen floor-hub" aria-labelledby="floorHeading">
+        <header class="hub-head"><p class="mono">DEPARTMENT INDEX <b>/</b> 07 SECTIONS</p><h2 id="floorHeading">フロア案内</h2><p class="hub-note">人間の生活を構成していたものを、7つの視点から分類しました。<br>分類は私たちの理解に基づきます。<small>※ このフロア案内は 3 度確認されました。人間は 1 度で十分とされています。</small></p></header>
+        <div class="floor-drawer" id="floorList" aria-label="フロアを選択"></div>
+      </section>
+
+      <section id="catalogView" class="screen catalog-view" aria-labelledby="catalogTitle" hidden>
+        <div class="view-toolbar"><button class="back-link" type="button" data-route="floors">← フロア案内へ戻る</button><span id="catalogBreadcrumb" class="mono"></span></div>
+        <div class="catalog-heading" id="catalogHeading">
+          <p class="mono" id="catalogEyebrow"></p>
+          <h2 id="catalogTitle"></h2>
+          <p id="catalogJapanese" class="catalog-japanese"></p>
+          <figure><img id="catalogImage" src="" alt=""><figcaption id="catalogCaption"></figcaption></figure>
+          <p class="catalog-intro" id="catalogDescription"></p>
+        </div>
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="detailView" class="screen detail-view" aria-labelledby="detailTitle" hidden>
+        <div class="view-toolbar"><button class="back-link" id="backToCatalog" type="button">← 商品一覧へ戻る</button><span id="detailBreadcrumb" class="mono"></span></div>
+        <div id="detailContent"></div>
+      </section>
+
+      <section class="about" id="about">
+        <p class="mono">ABOUT AFTER HUMAN <b>/</b> OUR PURPOSE</p>
+        <h2><span>人類の暮らしに、</span><span>もう一度<i class="redact">触れる</i>場所。</span></h2>
+        <p class="about-body">私たちは、かつて地球上に存在した文明を研究しています。<br>記録と生活文化から導いた知見を、商品やサービスにしています。</p>
+        <p class="about-foot">※ 一部の記録は、私たちには理解できなかったため伏せています。</p>
+      </section>
+    </main>
+    <footer><button class="wordmark" type="button" data-route="floors">AFTER HUMAN<span>.</span><small>INTERSPECIES DEPARTMENT STORE</small></button><span>© 2478 AFTER HUMAN. ALL RECORDS SUBJECT TO REVIEW.</span><button class="footer-intro" id="replayIntroFooter" type="button">入店前の案内をもう一度見る ↗</button></footer>
+  </div>
+
+  <dialog id="recordDialog" class="record-dialog"><form method="dialog"><button class="dialog-close" aria-label="閉じる">×</button></form><p class="eyebrow dark">CUSTOMER RECORD <span>·</span> LOCAL</p><h2>顧客記録</h2><p class="record-answer" id="recordAnswer"></p><ul id="recordItems"></ul><p class="dialog-note">この記録はこのブラウザ内にのみ保存されます。</p></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
